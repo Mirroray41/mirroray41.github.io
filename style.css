@@ -9,8 +9,6 @@ body {
     height: 100vh;
     color: #3d3d3d;
 
-    
-
     transition: all 2s;
 }
 
@@ -34,9 +32,47 @@ body::-webkit-scrollbar {
 body:has(.dark:checked) .background {
     background: linear-gradient(232deg, #5e0063, #004676, #5e0063, #300050, #004676);
     background-size: 1000% 1000%;
-
-    
 }
+
+a:visited {
+    color: #3b3b3b;
+}
+
+a {
+    text-decoration: none;
+    color: #616161;
+}
+
+a:hover {
+    color: #245e91;
+    transition: all 0.2s ease-in-out;
+}
+
+a:visited:hover {
+    color: #245e91;
+    transition: all 0.2s ease-in-out;
+}
+
+body:has(.dark:checked) a:visited:hover {
+    color: #fdd36a;
+    transition: all 0.2s ease-in-out;
+}
+
+body:has(.dark:checked) a:hover {
+    color: #fdd36a;
+    transition: all 0.2s ease-in-out;
+}
+
+body:has(.dark:checked) a {
+    color: #dbdbdb;
+    transition: all 2s;
+}
+
+body:has(.dark:checked) a:visited {
+    color: #b9b9b9;
+    transition: all 2s;
+}
+
 
 
 body:has(.dark:checked) {
@@ -70,8 +106,15 @@ h4 {
 }
 
 p {
-    font-size: 1.75rem;
+    font-size: 1.25rem;
+    font-weight: 400;
     margin-left: 3rem;
+}
+
+p2 {
+    font-size: 1rem;
+    font-weight: 300;
+    margin-left: 3.5rem;
 }
 
 .footer {
