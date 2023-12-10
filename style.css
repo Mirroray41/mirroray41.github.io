@@ -1,0 +1,185 @@
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    width: 100vw;
+    height: 100vh;
+    color: #3d3d3d;
+
+    
+
+    transition: all 2s;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+    background: linear-gradient(232deg, #fdd36a, #68fddd, #fdd36a, #6afd76, #68fddd);
+    background-size: 1000% 1000%;
+
+    -webkit-animation: BackgroundAnimation 7s ease infinite;
+    -moz-animation: BackgroundAnimation 7s ease infinite;
+    animation: BackgroundAnimation 7s ease infinite;
+}
+
+body:has(.dark:checked) .background {
+    background: linear-gradient(232deg, #5e0063, #004676, #5e0063, #300050, #004676);
+    background-size: 1000% 1000%;
+
+    
+}
+
+
+body:has(.dark:checked) {
+    color: #fff;
+    transition: all 2s;
+}
+
+h2 {
+    margin: 1rem 0 0 1rem;
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+h1 {
+    margin: 0 0 2rem 4vw;
+    font-size: 5.5rem;
+    font-weight: 700;
+}
+
+
+h3 {
+    align-self: center;
+    margin-bottom: 3rem;
+}
+
+h4 {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+p {
+    font-size: 1.75rem;
+    margin-left: 3rem;
+}
+
+.footer {
+    background-color: #3d3d3d;
+    width: 100vw;
+    height: 4rem;
+    padding-bottom: 1rem;
+    margin-top: 2rem;
+    bottom: 0;
+    transition: all 2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body:has(.dark:checked) .footer {
+    background-color: #fff;
+    transition: all 2s;
+}
+
+.dark {
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    height: 2rem;
+    width: 2rem;
+}
+
+.darkmodeButton {
+    margin: 1rem;
+    width: 2rem;
+    height: 2rem;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+.bulb {
+    width: 100%;
+    height: 100%;
+    transform: rotate(180deg);
+    transition: color 0.5s ease-in-out;
+}
+
+.darkmodeButton:hover .bulb{
+    color: #fdd36a;
+    transition: color 0.5s ease-in-out;
+}
+
+.footerImg {
+    color: #ffffff;
+    transition: all 0.2s ease-in-out;
+    width: 2rem;
+    height: 2rem;
+}
+
+.icohover {
+    width: 2rem;
+    height: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+}
+
+
+
+body:has(.dark:checked) .footerImg {
+    color: #3d3d3d;
+    transition: all 2s;
+}
+
+.icohover:hover  .footerImg {
+    color: #245e91;
+    transition: all 0.2s ease-in-out;
+}
+
+@-webkit-keyframes BackgroundAnimation {
+    0%{background-position:20% 0%}
+    50%{background-position:81% 100%}
+    100%{background-position:20% 0%}
+}
+@-moz-keyframes BackgroundAnimation {
+    0%{background-position:20% 0%}
+    50%{background-position:81% 100%}
+    100%{background-position:20% 0%}
+}
+@keyframes BackgroundAnimation {
+    0%{background-position:20% 0%}
+    50%{background-position:81% 100%}
+    100%{background-position:20% 0%}
+}
+
+
+@-webkit-keyframes DarkBackgroundAnimation {
+    0%{background-position:9% 0%}
+    50%{background-position:92% 100%}
+    100%{background-position:9% 0%}
+}
+@-moz-keyframes DarkBackgroundAnimation {
+    0%{background-position:9% 0%}
+    50%{background-position:92% 100%}
+    100%{background-position:9% 0%}
+}
+@keyframes DarkBackgroundAnimation {
+    0%{background-position:9% 0%}
+    50%{background-position:92% 100%}
+    100%{background-position:9% 0%}
+}
