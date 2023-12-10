@@ -108,12 +108,14 @@ h4 {
 p {
     font-size: 1.25rem;
     font-weight: 400;
+    margin-top: 2px;
     margin-left: 3rem;
 }
 
 .p2 {
     font-size: 1rem;
     font-weight: 300;
+    margin-top: 2px;
     margin-left: 3.5rem;
 }
 
