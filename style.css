@@ -145,25 +145,36 @@ body:has(.dark:checked) .footer {
     z-index: 2;
     opacity: 0;
     cursor: pointer;
-    margin: 0;
+    margin: 1rem 1rem 2rem 2rem;
     padding: 0;
     height: 2rem;
     width: 2rem;
 }
 
 .darkmodeButton {
-    margin: 1rem;
-    width: 2rem;
-    height: 2rem;
+    width: 5rem;
+    height: 5rem;
     position: fixed;
     right: 0;
     top: 0;
 }
 
-.bulb {
+.overlay {
     width: 100%;
     height: 100%;
+    z-index: -1;
+    opacity: 0.3;
+    margin-top: -5.125rem;
+    border-bottom-left-radius: 100%;
+    background-color: #1d1d1d;
+}
+
+.bulb {
+    margin: 1rem 1rem 2rem 2rem;
+    width: 2rem;
+    height: 2rem;
     transform: rotate(180deg);
+    opacity: 2;
     transition: color 0.5s ease-in-out;
 }
 
