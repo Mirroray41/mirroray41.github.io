@@ -164,7 +164,7 @@ body:has(.dark:checked) .footer {
     height: 100%;
     z-index: -1;
     opacity: 0.2;
-    box-shadow: 0 0 25px 25px #1d1d1d;
+    box-shadow: -1px -1px 25px 25px #1d1d1d;
     margin-top: -5.125rem;
     border-bottom-left-radius: 100%;
     background-color: #1d1d1d;
