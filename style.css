@@ -36,11 +36,13 @@ body:has(.dark:checked) .background {
 
 a:visited {
     color: #3b3b3b;
+    transition: all 2s;
 }
 
 a {
     text-decoration: none;
     color: #616161;
+    transition: all 2s;
 }
 
 a:hover {
@@ -170,13 +172,15 @@ body:has(.dark:checked) .footer {
 }
 
 .footerImg {
-    color: #ffffff;
+    color: inherit;
     transition: all 0.2s ease-in-out;
     width: 2rem;
     height: 2rem;
 }
 
 .icohover {
+    color: #fff;
+    opacity: 1;
     width: 2rem;
     height: 2rem;
     margin-left: 1rem;
@@ -186,15 +190,21 @@ body:has(.dark:checked) .footer {
 
 
 
-body:has(.dark:checked) .footerImg {
-    color: #3d3d3d;
+body:has(.dark:checked) .icohover {
+    color: #1d1d1d;
     transition: all 2s;
 }
 
-.icohover:hover  .footerImg {
+body:not(:has(.dark:checked)).icohover:hover{
     color: #245e91;
-    transition: all 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out;
 }
+
+body:has(.dark:checked) .icohover:hover{ 
+    color: #fdd36a;
+    transition: color 0.2s ease-in-out;
+}
+
 
 @-webkit-keyframes BackgroundAnimation {
     0%{background-position:20% 0%}
@@ -210,21 +220,4 @@ body:has(.dark:checked) .footerImg {
     0%{background-position:20% 0%}
     50%{background-position:81% 100%}
     100%{background-position:20% 0%}
-}
-
-
-@-webkit-keyframes DarkBackgroundAnimation {
-    0%{background-position:9% 0%}
-    50%{background-position:92% 100%}
-    100%{background-position:9% 0%}
-}
-@-moz-keyframes DarkBackgroundAnimation {
-    0%{background-position:9% 0%}
-    50%{background-position:92% 100%}
-    100%{background-position:9% 0%}
-}
-@keyframes DarkBackgroundAnimation {
-    0%{background-position:9% 0%}
-    50%{background-position:92% 100%}
-    100%{background-position:9% 0%}
 }
